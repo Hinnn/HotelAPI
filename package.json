@@ -1,0 +1,46 @@
+{
+  "name": "hotelbooking",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/bookings-test.js",
+    "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
+    "test:watch": "npm run test -- --watch",
+    "start": "npm-run-all test build server",
+    "clean": "rimraf ./lib && mkdir lib",
+    "postbuild": "npm run server",
+    "prebuild": "npm-run-all test clean",
+    "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files",
+    "server:watch": "cross-env NODE_ENV=dev nodemon --exec babel-node bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.3",
+    "morgan": "~1.9.0",
+    "sinon": "^7.1.0",
+    "sinon-mongoose": "^2.2.1",
+    "vue-tables-2": "^1.4.70"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "chai-things": "^0.2.0",
+    "cross-env": "^5.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.18.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.2"
+  }
+}

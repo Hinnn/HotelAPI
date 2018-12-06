@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for hotelBooking/routes/bookings.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">hotelBooking/routes/</a> bookings.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.81% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">29.31% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/58</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const mongoose = require('mongoose');
+let Booking = require('../models/bookings');
+let express = require('express');
+let router = express.Router();
+&nbsp;
+//let uriUtil = require('mongodb-uri');
+&nbsp;
+let mongodbUri ='mongodb://YueWang:bookings999@ds135179.mlab.com:35179/bookings';
+&nbsp;
+mongoose.connect(mongodbUri);
+&nbsp;
+//mongoose.connect('mongodb://localhost:27017/bookingsdb');
+&nbsp;
+let db = mongoose.connection;
+&nbsp;
+db.on('error', <span class="fstat-no" title="function not covered" >function (err) {</span>
+<span class="cstat-no" title="statement not covered" >    console.log('Unable to Connect to [ ' + db.name + ' ]', err);</span>
+});
+&nbsp;
+db.once('open', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    console.log('Successfully Connected to [ ' + db.name + ' ] ');</span>
+});
+&nbsp;
+&nbsp;
+router.findAll = (req, res) =&gt; {
+    // Return a JSON representation of our list
+<span class="cstat-no" title="statement not covered" >    res.setHeader('Content-Type', 'application/json');</span>
+    // res.send(JSON.stringify(bookings,null,5));
+<span class="cstat-no" title="statement not covered" >    Booking.find(<span class="fstat-no" title="function not covered" >function(err, bookings) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (err)</span>
+<span class="cstat-no" title="statement not covered" >            res.send(err);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        res.send(JSON.stringify(bookings,null,5));</span>
+    });
+};
+router.findOne = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >    res.setHeader('Content-Type', 'application/json');</span>
+    /* var booking = getByValue(bookings,req.params.orderID);
+    // Create a donation variable and use the helper function to find req.params.id in our booking array
+    if (booking != null)
+        res.send(JSON.stringify(booking,null,5));//value,replacer,spacing
+    else
+        res.send('Booking NOT Found!!');
+    // Then either return the found donation or a suitable error message*/
+<span class="cstat-no" title="statement not covered" >    Booking.find({ 'customerID' : req.params.customerID},<span class="fstat-no" title="function not covered" >function(err, booking) {</span></span>
+        // Booking.find({ "_id" : req.params._id },function(err, booking) {
+<span class="cstat-no" title="statement not covered" >        if (err)</span>
+<span class="cstat-no" title="statement not covered" >            res.json({ message: 'Booking NOT Found!', errmsg : err } );</span>
+        else
+<span class="cstat-no" title="statement not covered" >            res.send(JSON.stringify(booking,null,5));</span>
+    });
+};
+&nbsp;
+/*function getByValue(array, orderID) {
+    var result  = array.filter(function(obj){return obj.orderID == orderID;} );
+    return result ? result[0] : null; // or undefined
+}*/
+&nbsp;
+<span class="fstat-no" title="function not covered" >function getTotalAmount(array) {</span>
+<span class="cstat-no" title="statement not covered" >    let totalAmount = 0;</span>
+<span class="cstat-no" title="statement not covered" >    array.forEach(<span class="fstat-no" title="function not covered" >function(obj) {</span> <span class="cstat-no" title="statement not covered" >totalAmount += obj.amount; </span>});</span>
+<span class="cstat-no" title="statement not covered" >    return totalAmount;</span>
+}
+&nbsp;
+router.addBooking = (req, res) =&gt; {
+    /*Add a new booking to our list
+    var orderID = Math.floor((Math.random() * 1000000) + 1); //Randomly generate an orderid
+    var currentSize = bookings.length;
+    //var customerID = require('../models/customers');
+    //var roomID = require('../models/rooms');
+    bookings.push({"orderID" : orderID, customerID: req.params.customerID, "paymenttype" : req.body.paymenttype,
+        "date": req.body.date,"amount" : req.body.amount, "roomID" : req.body.roomID, "price" : req.body.price});
+&nbsp;
+    if((currentSize + 1) == bookings.length)
+        res.json({ message: 'Booking Added Successfully!'});
+    else
+        res.json({ message: 'Booking NOT Added!'});*/
+<span class="cstat-no" title="statement not covered" >    res.setHeader('Content-Type', 'application/json');</span>
+<span class="cstat-no" title="statement not covered" >    var booking = new Booking();</span>
+    //var orderID = Math.floor((Math.random() * 1000000) + 1);
+    // booking.customerID = req.params.customerID;
+&nbsp;
+    //booking.orderID = req.params.orderID;
+    //booking.orderID = Math.floor((Math.random() * 1000000) + 1);
+<span class="cstat-no" title="statement not covered" >    booking.customerID = req.body.customerID;</span>
+<span class="cstat-no" title="statement not covered" >    booking.paymenttype = req.body.paymenttype;</span>
+<span class="cstat-no" title="statement not covered" >    booking.date = req.body.date;</span>
+<span class="cstat-no" title="statement not covered" >    booking.amount = req.body.amount;</span>
+<span class="cstat-no" title="statement not covered" >    booking.roomNum = req.body.roomNum;</span>
+<span class="cstat-no" title="statement not covered" >    booking.price = req.body.price;</span>
+<span class="cstat-no" title="statement not covered" >    booking.save(<span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (err)</span>
+<span class="cstat-no" title="statement not covered" >            res.json({ message: 'Booking NOT Added!', errmsg : err } );</span>
+        else
+<span class="cstat-no" title="statement not covered" >            res.json({ message: 'Booking Successfully Added!', data: booking });</span>
+    });
+};
+&nbsp;
+router.incrementAmount = (req, res) =&gt; {
+&nbsp;
+    // Find the relevant booking based on params id passed in
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    res.setHeader('Content-Type', 'application/json');</span>
+<span class="cstat-no" title="statement not covered" >    let booking = new Booking({</span>
+        //customerID: req.body.customerID,
+        paymenttype: req.body.paymenttype,
+        date: req.body.date,
+        amount: req.body.amount,
+        roomNum: req.body.roomNum,
+        price: req.body.price
+&nbsp;
+    });
+<span class="cstat-no" title="statement not covered" >    Booking.update({'customerID': req.params.customerID},</span>
+        {
+            paymenttype: req.body.paymenttype,
+            date: req.body.date,
+            amount: req.body.amount,
+            roomNum: req.body.roomNum,
+            price: req.body.price
+        },
+<span class="fstat-no" title="function not covered" >        function (err, booking) {</span>
+<span class="cstat-no" title="statement not covered" >            if (err)</span>
+<span class="cstat-no" title="statement not covered" >                res.json({message: 'Booking Not Edited', errmsg: err});</span>
+            else
+<span class="cstat-no" title="statement not covered" >                res.json({message: 'Booking Edited successfully', data: booking});</span>
+        });
+};
+&nbsp;
+&nbsp;
+&nbsp;
+/*Booking.findOneAndUpdate({customerID:{$in:req.body.customerID}}, {$inc:{amount:1}}, function (err,booking) {
+&nbsp;
+        if (err)
+            res.json({message: 'Booking NOT Found!', errmsg: err});
+        else
+            //booking.amount += 1;
+           // booking.save(function (err) {
+               // if (err)
+                   // res.json({message: ' Amount not added!', errmsg: err});
+               // else
+&nbsp;
+                    res.json({message: 'Booking Increased!', data: booking});
+            });
+   // });
+}*/
+&nbsp;
+&nbsp;
+&nbsp;
+router.deleteBooking = (req, res) =&gt; {
+    //Delete the selected booking based on its id
+    // Booking.find({ "customerID" : req.params.customerID},function(err) {
+<span class="cstat-no" title="statement not covered" >    Booking.findOneAndRemove({customerID:req.params.customerID}, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+        //Booking.findByIdAndRemove({id:req.params.id},function (err){
+<span class="cstat-no" title="statement not covered" >        if (!err) {</span>
+            //res.json({message: 'Booking NOT Found!', errmsg: err});
+            //console.log(booking.customerID + "deleted");
+<span class="cstat-no" title="statement not covered" >            res.json({message: 'Booking Successfully Deleted!'});</span>
+        }
+        else
+            //remove(req.params.customerID);
+        //res.json({message: 'Booking Successfully Deleted!'});
+<span class="cstat-no" title="statement not covered" >            res.json({message: 'Booking NOT Found!', errmsg: err});</span>
+    });
+&nbsp;
+};
+&nbsp;
+router.findTotalAmount = (req, res) =&gt; {
+    /*
+        let amount = getTotalAmount(bookings);
+        res.json({totalamount : amount});*/
+<span class="cstat-no" title="statement not covered" >    Booking.find(<span class="fstat-no" title="function not covered" >function (err, bookings) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (err)</span>
+<span class="cstat-no" title="statement not covered" >            res.send(err);</span>
+        else
+<span class="cstat-no" title="statement not covered" >            res.json({totalamount: getTotalAmount(bookings)});</span>
+    });
+};
+&nbsp;
+module.exports = router;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Dec 06 2018 21:26:35 GMT+0000 (GMT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
